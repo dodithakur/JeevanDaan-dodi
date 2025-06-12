@@ -1,0 +1,162 @@
+[
+    {
+        "Disease Name": "Encephalitis",
+        "Address": "Golmuri, Jamshedpur",
+        "Date": "2024-11-06",
+        "Latitude": "22.8764546047379",
+        "Longitude": "86.1052257964169",
+        "Age Group": "13-18"
+    },
+    {
+        "Disease Name": "Cholera",
+        "Address": "Chhota Govindpur, Jamshedpur",
+        "Date": "2024-11-11",
+        "Latitude": "22.871636523032663",
+        "Longitude": "86.08850154640031",
+        "Age Group": "65+"
+    },
+    {
+        "Disease Name": "Typhoid",
+        "Address": "Patamda, Jamshedpur",
+        "Date": "2024-11-18",
+        "Latitude": "22.8897187898901",
+        "Longitude": "86.17465337692283",
+        "Age Group": "51-65"
+    },
+    {
+        "Disease Name": "Leprosy",
+        "Address": "Gamharia, Jamshedpur",
+        "Date": "2024-10-24",
+        "Latitude": "22.704893895649544",
+        "Longitude": "86.08919160748626",
+        "Age Group": "0-5"
+    },
+    {
+        "Disease Name": "Influenza",
+        "Address": "Jugsalai, Jamshedpur",
+        "Date": "2024-10-30",
+        "Latitude": "22.793513944478327",
+        "Longitude": "86.18399311104005",
+        "Age Group": "65+"
+    },
+    {
+        "Disease Name": "Leptospirosis",
+        "Address": "Potka, Jamshedpur",
+        "Date": "2024-11-11",
+        "Latitude": "22.883206796742787",
+        "Longitude": "86.2688529292757",
+        "Age Group": "51-65"
+    },
+    {
+        "Disease Name": "Anemia",
+        "Address": "Kadma, Jamshedpur",
+        "Date": "2024-10-26",
+        "Latitude": "22.783978621786634",
+        "Longitude": "86.09768232867005",
+        "Age Group": "19-35"
+    },
+    {
+        "Disease Name": "Hypertension",
+        "Address": "Patamda, Jamshedpur",
+        "Date": "2024-11-21",
+        "Latitude": "22.767058561241498",
+        "Longitude": "86.27986763097213",
+        "Age Group": "51-65"
+    },
+    {
+        "Disease Name": "Rabies",
+        "Address": "Kadma, Jamshedpur",
+        "Date": "2024-10-29",
+        "Latitude": "22.839503980907097",
+        "Longitude": "86.26684954977793",
+        "Age Group": "65+"
+    },
+    {
+        "Disease Name": "Hepatitis",
+        "Address": "Burma Mines, Jamshedpur",
+        "Date": "2024-10-26",
+        "Latitude": "22.774282184762054",
+        "Longitude": "86.23079545405685",
+        "Age Group": "65+"
+    },
+    {
+        "Disease Name": "Influenza",
+        "Address": "Chhota Govindpur, Jamshedpur",
+        "Date": "2024-10-30",
+        "Latitude": "22.731290237480014",
+        "Longitude": "86.16691506898667",
+        "Age Group": "13-18"
+    },
+    {
+        "Disease Name": "Hypertension",
+        "Address": "Chhota Govindpur, Jamshedpur",
+        "Date": "2024-10-24",
+        "Latitude": "22.81619652721164",
+        "Longitude": "86.26703737077376",
+        "Age Group": "13-18"
+    },
+    {
+        "Disease Name": "Malaria",
+        "Address": "Bistupur, Jamshedpur",
+        "Date": "2024-10-26",
+        "Latitude": "22.890871496717693",
+        "Longitude": "86.25190972869527",
+        "Age Group": "51-65"
+    },
+    {
+        "Disease Name": "Leprosy",
+        "Address": "Baridih, Jamshedpur",
+        "Date": "2024-11-19",
+        "Latitude": "22.831108119111214",
+        "Longitude": "86.26743780561847",
+        "Age Group": "0-5"
+    },
+    {
+        "Disease Name": "COVID-19",
+        "Address": "Kadma, Jamshedpur",
+        "Date": "2024-11-11",
+        "Latitude": "22.751715428074135",
+        "Longitude": "86.22842288818553",
+        "Age Group": "0-5"
+    },
+    {
+        "Disease Name": "Typhoid",
+        "Address": "Kandra, Jamshedpur",
+        "Date": "2024-10-27",
+        "Latitude": "22.808881030146747",
+        "Longitude": "86.09310320097671",
+        "Age Group": "36-50"
+    },
+    {
+        "Disease Name": "Leptospirosis",
+        "Address": "Mango, Jamshedpur",
+        "Date": "2024-10-27",
+        "Latitude": "22.821062896217953",
+        "Longitude": "86.13994938396209",
+        "Age Group": "65+"
+    },
+    {
+        "Disease Name": "COVID-19",
+        "Address": "Paridih, Jamshedpur",
+        "Date": "2024-11-05",
+        "Latitude": "22.881094308198918",
+        "Longitude": "86.09047145915432",
+        "Age Group": "36-50"
+    },
+    {
+        "Disease Name": "Asthma",
+        "Address": "Kadma, Jamshedpur",
+        "Date": "2024-11-05",
+        "Latitude": "22.88637310338035",
+        "Longitude": "86.15490048759098",
+        "Age Group": "36-50"
+    },
+    {
+        "Disease Name": "Tuberculosis",
+        "Address": "Telco, Jamshedpur",
+        "Date": "2024-11-04",
+        "Latitude": "22.749987122750323",
+        "Longitude": "86.23604421185829",
+        "Age Group": "0-5"
+    }
+]

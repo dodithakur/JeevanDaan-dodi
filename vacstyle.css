@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.vaccontainer {
+    
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#controls label {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+#controls input {
+    margin-right: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.result-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fefefe;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.result-card h2 {
+    margin: 0 0 5px 0;
+    color: #007BFF;
+}
+
+.result-card p {
+    margin: 5px 0;
+    color: #555;
+}
