@@ -103,6 +103,10 @@ frequentSearchTerms.forEach(term => {
 function openModal(medicine) {
     const modal = document.getElementById("modal");
     const modalDetails = document.getElementById("modalDetails");
+
+    // Lock background scroll
+    document.body.style.overflow = "hidden";
+
     modal.style.display = "flex";
     modalDetails.innerHTML = `
         <h2>${medicine['Medicine Name']}</h2>
@@ -114,6 +118,23 @@ function openModal(medicine) {
         <p><strong>Reviews:</strong> Excellent: ${medicine['Excellent Review %']}%, Average: ${medicine['Average Review %']}%, Poor: ${medicine['Poor Review %']}%</p>
     `;
 }
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+
+    // Restore background scroll
+    document.body.style.overflow = "auto";
+}
+
+// Close modal when clicking outside
+window.addEventListener("click", (event) => {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
 
 // Close modal functionality
 document.querySelector(".close").addEventListener("click", () => {
