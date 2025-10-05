@@ -55,6 +55,27 @@
       border-color: #00adb3;
     }
 
+    .password-field{display:flex;align-items:center}
+    .password-field input{flex:1}
+    .toggle-password{
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      margin-left:8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:36px;
+      height:36px;
+      padding:6px;
+      color:#222;
+      border-radius:8px;
+      transition:color .12s, background-color .12s, box-shadow .12s;
+    }
+    .toggle-password svg{width:20px;height:20px;display:block}
+    .toggle-password:hover{color:#000;background-color:rgba(0,0,0,0.04)}
+    .toggle-password:focus{outline:none;box-shadow:0 0 0 3px rgba(0,173,179,0.15)}
+
     .btn {
       width: 100%;
       background: #00adb3;
@@ -98,9 +119,17 @@
         <input type="text" id="loginEmailOrNumber" placeholder="Email or Number">
       </div>
 
-      <div class="input-box">
+      <div class="input-box password-box">
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <button type="button" class="toggle-password" aria-label="Show password" data-target="password">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <button type="submit" class="btn">Login</button>
@@ -120,6 +149,25 @@ window.addEventListener('DOMContentLoaded', () => {
         if(loginEmailInput) loginEmailInput.value = storedNumber;
     }
 });
+// Password toggle for login
+(function(){
+  document.querySelectorAll('.toggle-password').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.target;
+      const input = document.getElementById(id);
+      if(!input) return;
+
+      const isHidden = input.type === 'password';
+      input.type = isHidden ? 'text' : 'password';
+
+      btn.innerHTML = isHidden ?
+        '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">\n  <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7 .95-1.64 2.5-3.45 4.6-4.86" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n  <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n  <path d="M9.88 9.88A3 3 0 0 0 14.12 14.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n</svg>' :
+        '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">\n  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n</svg>';
+
+      btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+    });
+  });
+})();
 </script>
 
 </body>
