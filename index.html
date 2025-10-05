@@ -592,25 +592,44 @@
             <div class="hero-card" data-reveal="left">
 
               <p class="title-lg card-text" id="asdfg">
-                LOGIN
+                LOGIN/SIGNUP
               </p>
 
               <div class="wrapper">
 
                 <div class="input-wrapper title-lg">
-                  <input type="text" name="location" placeholder="CONTACT" class="input-field">
+                        <input type="text" id="contactNumberInput" name="location" placeholder="CONTACT" class="input-field">
+                    </div>
 
 
-                </div>
+                <!-- Replace this block
                 <a href="#asdfg">
                   <button class="btn has-before">
-
-
                     <span class="span title-md">LOGIN
-
                     </span>
                   </button>
-                </a>
+                </a> -->
+
+                <!-- Button to login/signup -->
+                    <a href="login.html">
+                    <button id="loginBtn" class="btn has-before">
+                        <span class="span title-md">LOGIN/SIGNUP</span>
+                    </button>
+                    </a>
+                    <script>
+                    document.getElementById('loginBtn').addEventListener('click', (e) => {
+                        const contactNumber = document.getElementById('contactNumberInput').value.trim();
+
+                        if(contactNumber) {
+                            localStorage.setItem('contactNumber', contactNumber); // save number
+                        } else {
+                            localStorage.removeItem('contactNumber'); // remove old number if empty
+                        }
+
+                        // Navigate to login/signup page
+                        window.location.href = 'login-signup.html';
+                    });
+                    </script>
               </div>
 
             </div>
