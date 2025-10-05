@@ -395,6 +395,22 @@ body.nav-active { overflow: hidden; }
   padding: 10px 24px;
 }
 
+/* Profile avatar in navbar */
+.profile-avatar { display: inline-flex; align-items: center; padding: 6px 12px; }
+.profile-avatar .avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  border: 2px solid var(--white_a10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile-avatar .avatar-img:hover,
+.profile-avatar .avatar-img:focus {
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
 .social-list {
   justify-content: center;
   gap: 20px;

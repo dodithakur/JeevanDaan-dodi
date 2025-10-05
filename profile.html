@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Profile - Jeevandaan</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		body { overflow: auto; margin: 0; padding: 0; background-color: #f5f7fa; }
+		.container { max-width: 1200px; margin: 0 auto; width: 100%; }
+		
+		/* Base styles */
+		.profile-hero { 
+			background-color: #002D62; 
+			color: white; 
+			padding: 40px 16px; 
+			margin-top: 0; 
+		}
+		.profile-card { 
+			background: var(--white); 
+			border-radius: 12px; 
+			padding: 24px; 
+			color: var(--independece); 
+			box-shadow: var(--shadow-1);
+			margin-bottom: 20px;
+		}
+		.profile-header { 
+			display: flex; 
+			flex-wrap: wrap;
+			gap: 20px; 
+			align-items: center; 
+		}
+		.profile-header .avatar-large { 
+			width: 96px; 
+			height: 96px; 
+			border-radius: 50%; 
+			object-fit: cover; 
+			border: 4px solid var(--verdigris); 
+		}
+		.profile-actions { 
+			margin-left: auto; 
+			display: flex; 
+			gap: 8px; 
+		}
+		.section-title { 
+			font-weight: 800;
+			margin-bottom: 14px;
+			font-size: 1.6rem;
+			letter-spacing: 0.5px;
+		}
+		.info-grid { 
+			display: grid; 
+			grid-template-columns: 1fr 1fr; 
+			gap: 20px; 
+		}
+		.list { 
+			margin-top: 24px;
+		}
+		.list ul {
+			padding-left: 20px;
+		}
+		.list li {
+			margin-bottom: 10px;
+			list-style: disc;
+			line-height: 1.4;
+		}
+		.btn-logout { 
+			background: #e74c3c; 
+			color: white; 
+			padding: 8px 14px; 
+			border-radius: 8px;
+			transition: background-color 0.2s ease;
+		}
+		.btn-logout:hover {
+			background: #c0392b;
+		}
+		.home-link {
+			color: var(--white);
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			padding: 6px 12px;
+			border-radius: 4px;
+			transition: background-color 0.2s ease;
+		}
+		.home-link:hover {
+			background-color: rgba(255,255,255,0.1);
+		}
+		.text-muted {
+			color: var(--gray-web);
+		}
+		.section-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 600px) {
+  .section-box {
+    padding: 16px 10px;
+    border-radius: 12px;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .profile-header .avatar-large {
+    width: 72px;
+    height: 72px;
+  }
+  .profile-header button[title="Change photo"] {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+    bottom: 2px;
+    right: 2px;
+  }
+}
+		
+		/* Responsive breakpoints */
+		/* Large phones and tablets (600px - 900px) */
+		@media (max-width: 900px) {
+			.container {
+				max-width: 100%;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+			.profile-hero {
+				padding: 24px 8px;
+			}
+			.profile-card {
+				padding: 16px 8px;
+			}
+			.info-grid {
+				gap: 12px;
+			}
+		}
+		
+		/* Small tablets (600px - 768px) */
+		@media (max-width: 768px) {
+			.profile-header {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 12px;
+			}
+			.info-grid {
+				grid-template-columns: 1fr;
+				gap: 10px;
+			}
+			.profile-card {
+				padding: 12px 4px;
+			}
+		}
+		
+		/* Mobile phones (< 600px) */
+		@media (max-width: 600px) { 
+			.container {
+				padding-left: 2px;
+				padding-right: 2px;
+			}
+			.profile-header .avatar-large {
+				width: 60px;
+				height: 60px;
+			}
+			.profile-header button[title="Change photo"] {
+				width: 22px;
+				height: 22px;
+				font-size: 0.9rem;
+				bottom: 0px;
+				right: 0px;
+			}
+			.profile-card {
+				padding: 6px 0px;
+			}
+			.section-title {
+				font-size: 1.1rem;
+			}
+		}
+		
+		/* Small phones (< 400px) */
+		@media (max-width: 400px) {
+			.profile-header .avatar-large {
+				width: 44px;
+				height: 44px;
+			}
+			.profile-header button[title="Change photo"] {
+				width: 16px;
+				height: 16px;
+				font-size: 0.7rem;
+			}
+			.section-title {
+				font-size: 1rem;
+			}
+		}
+		/* Hide any sidebar that might be appearing */
+		#sideBar, .sidebar, aside[class*="sidebar"] {
+			display: none !important;
+		}
+		
+		/* Force main content to take full width */
+		.container {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		
+		/* Ensure clean layout */
+		main {
+			width: 100% !important;
+			margin-left: 0 !important;
+			padding-left: 0 !important;
+		}
+	</style>
+</head>
+<body>
+
+  <button onclick="window.history.back()" style="position: absolute; top: 24px; left: 32px; z-index: 1000; background: none; border: none; color: var(--white); font-size: 2.1rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; padding: 10px 22px;">
+    <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 10px;"></i> <span style="font-size:1.3rem;">Back</span>
+  </button>
+
+  <button class="btn-logout" style="position: absolute; top: 24px; right: 32px; z-index: 1000; background: #e74c3c; color: white; padding: 16px 32px; border-radius: 10px; font-size: 2 rem; font-weight: 600; box-shadow: 0 2px 12px rgba(0,0,0,0.10);" onclick="alert('Logged out (demo)')">Logout</button>
+
+	<header class="header" style="position: static; padding-top: 0; background-color: #002D62; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+		<div class="container" style="display: flex; justify-content: flex-start; align-items: center;">
+			<a href="index.html" class="logo" style="display: block; margin-top: 18px;"><img src="./assets/images/logofinal.png" width="200" height="46" alt="logo"></a>
+		</div>
+	</header>
+
+	<main>
+		<section class="profile-hero">
+			<div class="container">
+				<h1 class="headline-md" style="color:var(--white); margin-top: 0;">Your Profile</h1>
+				<p style="color:rgba(255,255,255,0.8); margin-top:8px; max-width: 600px;">Manage your personal information, medical history and appointments.</p>
+			</div>
+		</section>
+
+		<section style="padding: 30px 16px;">
+			<div class="container">
+				<div class="profile-card">
+					<div class="profile-header section-box" style="margin-bottom: 24px; position: relative;">
+  <div style="position: relative; display: inline-block;">
+    <img src="./assets/images/ai-generated-portrait-of-young-doctor-man-happy-smiling-free-png.webp" alt="avatar" class="avatar-large">
+    <button title="Change photo" style="position: absolute; bottom: 6px; right: 6px; background: #fff; border: none; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.10); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+      <i class="fa fa-edit" style="color: #007bff; font-size: 1.3rem;"></i>
+    </button>
+  </div>
+  <div>
+    <h2 style="margin:0; font-size: calc(1.3rem + 0.5vw);">Ramesh Kumar</h2>
+    <p class="text-muted">• Contact: +91 98765 XXX10 <span>   • Aadhaar: 1234-XXXX-9012</span></p>
+    <p style="margin-top:8px;">Location: Ramgarh, Bihar</p>
+  </div>
+  <div class="profile-actions">
+    <a href="#edit" class="btn">Edit</a>
+    <!-- Logout button moved to top right -->
+  </div>
+</div>
+
+					<div class="info-grid">
+						<div class="section-box">
+							<p class="section-title">Medical Summary</p>
+							<p><strong>Allergies:</strong> None recorded</p>
+							<p><strong>Blood Group:</strong> B+</p>
+							<p><strong>Chronic Conditions:</strong> Hypertension (managed)</p>
+						</div>
+						<div class="section-box">
+							<p class="section-title">Next Appointment</p>
+							<p><strong>Date:</strong> 12 Oct 2025</p>
+							<p><strong>Doctor:</strong> Dr. Ramesh Kumar (PHC Ramgarh)</p>
+							<p><strong>Purpose:</strong> Follow-up</p>
+						</div>
+					</div>
+
+					<div class="section-box list">
+						<p class="section-title">My Doctors</p>
+						<ul>
+							<li><strong>Dr. Ramesh Kumar</strong> — PHC Ramgarh — <a href="tel:+9198700XXX45">98700XXX45</a></li>
+							<li><strong>Dr. Priya Sharma</strong> — CHC Motihari — <a href="tel:+9198711XXX34">98711XXX34</a></li>
+						</ul>
+					</div>
+
+					<div class="section-box list">
+						<p class="section-title">Medical History</p>
+						<ul>
+							<li><strong>2024-11-02</strong> — Fever & diagnosed with viral infection — Treated with rest</li>
+							<li><strong>2023-05-20</strong> — Hypertension screening — Ongoing medication</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer" style="padding:24px 16px; margin-top:20px;">
+		<div class="container">
+			<p style="color:var(--white); text-align: center;">© 2025 Jeevandaan — Health Companion</p>
+		</div>
+	</footer>
+	
+	<script>
+	// Add responsive behaviors if needed
+	function handleResize() {
+		// You can add dynamic responsive behavior here if needed
+		const width = window.innerWidth;
+		
+		// Example of how to adjust UI based on screen size
+		// const profileHeader = document.querySelector('.profile-header');
+		// if (width <= 400) {
+		//    profileHeader.classList.add('compact-view');
+		// } else {
+		//    profileHeader.classList.remove('compact-view');
+		// }
+	}
+	
+	// Initial call and event listener
+	window.addEventListener('resize', handleResize);
+	handleResize();
+	</script>
+
+</body>
+</html>

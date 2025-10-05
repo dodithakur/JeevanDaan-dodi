@@ -288,93 +288,10 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md" onmouseover="showDropdown()" onmouseout="hideDropdown()"
-              id="profileLink"><i class="fa-solid fa-user"></i> PROFILE </a>
-            <div id="profileDropdownContainer" style="position: relative;">
-              <div id="profileDropdown" class="dropdown-content"
-                style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;"
-                onmouseover="keepDropdownOpen()" onmouseout="dropdownLeft()">
-                <a href="#" style="padding: 10px; display: block;">Name</a>
-                <a href="#" style="padding: 10px; display: block;">Aadhaar no.</a>
-                <a href="#" style="padding: 10px; display: block;">Medical history</a>
-                <a href="#" style="padding: 10px; display: block;">My doctors</a>
-                <a href="#" style="padding: 10px; display: block;">My appointments</a>
-                <a href="#" style="padding: 10px; display: block;">Logout</a>
-              </div>
-            </div>
+            <a href="profile.html" class="navbar-link title-md profile-avatar" title="Profile">
+              <img src="./assets/images/doctorr.png" alt="Profile avatar" class="avatar-img">
+            </a>
           </li>
-          <script>
-            var dropdownHovered = false;
-            var profileLinkHovered = false;
-
-            function showDropdown() {
-              var dropdownContent = document.getElementById("profileDropdown");
-              dropdownContent.style.display = "block";
-            }
-
-            function hideDropdown() {
-              if (!dropdownHovered && !profileLinkHovered) {
-                var dropdownContent = document.getElementById("profileDropdown");
-                dropdownContent.style.display = "none";
-              }
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function (event) {
-              var dropdownContent = document.getElementById("profileDropdown");
-              if (!event.target.matches('.navbar-link') && dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-              }
-            }
-
-            function keepDropdownOpen() {
-              dropdownHovered = true;
-            }
-
-            function dropdownLeft() {
-              dropdownHovered = false;
-              hideDropdown();
-            }
-
-            function hideDropdown() {
-              if (!dropdownHovered && !profileLinkHovered) {
-                var dropdownContent = document.getElementById("profileDropdown");
-                dropdownContent.style.display = "none";
-              }
-            }
-
-            function keepDropdownOpen() {
-              dropdownHovered = true;
-              var dropdownContent = document.getElementById("profileDropdown");
-              dropdownContent.style.display = "block";
-            }
-
-            function dropdownLeft() {
-              dropdownHovered = false;
-              hideDropdown();
-            }
-            document.getElementById("profileLink").addEventListener("mouseover", function () {
-              profileLinkHovered = true;
-            });
-
-            document.getElementById("profileLink").addEventListener("mouseout", function () {
-              profileLinkHovered = false;
-              setTimeout(function () {
-                hideDropdown();
-              }, 200);
-            });
-
-            document.getElementById("profileDropdownContainer").addEventListener("mouseover", function () {
-              dropdownHovered = true;
-            });
-
-            document.getElementById("profileDropdownContainer").addEventListener("mouseout", function () {
-              dropdownHovered = false;
-              setTimeout(function () {
-                hideDropdown();
-              }, 200);
-            });
-          </script>
 
           <ul class="navbar">
 
@@ -404,57 +321,16 @@
           </ul>
 
           <script>
-            function showProfileDropdown() {
-              var dropdownContent = document.getElementById('profileDropdown');
-              dropdownContent.style.display = "block";
-            }
-
-            function hideProfileDropdown() {
-              var dropdownContent = document.getElementById('profileDropdown');
-              dropdownContent.style.display = "none";
-            }
-
+            // Language dropdown helpers (profile dropdown removed in favour of dedicated profile page)
             function showLanguageDropdown() {
               var dropdownContent = document.getElementById('languageDropdown');
-              dropdownContent.style.display = "block";
+              if (dropdownContent) dropdownContent.style.display = "block";
             }
 
             function hideLanguageDropdown() {
               var dropdownContent = document.getElementById('languageDropdown');
-              dropdownContent.style.display = "none";
+              if (dropdownContent) dropdownContent.style.display = "none";
             }
-            function hideProfileDropdown() {
-              var dropdownContent = document.getElementById('profileDropdown');
-              if (!isCursorOverDropdown(dropdownContent)) {
-                dropdownContent.style.display = "none";
-              }
-            }
-
-            function hideLanguageDropdown() {
-              var dropdownContent = document.getElementById('languageDropdown');
-              if (!isCursorOverDropdown(dropdownContent)) {
-                dropdownContent.style.display = "none";
-              }
-            }
-
-            function isCursorOverDropdown(dropdown) {
-              var dropdownRect = dropdown.getBoundingClientRect();
-              var cursorX = event.clientX;
-              var cursorY = event.clientY;
-              return (cursorX >= dropdownRect.left && cursorX <= dropdownRect.right && cursorY >= dropdownRect.top && cursorY <= dropdownRect.bottom);
-            }
-
-            document.getElementById('profileDropdown').addEventListener('mouseout', function (event) {
-              if (!isCursorOverDropdown(this)) {
-                this.style.display = "none";
-              }
-            });
-
-            document.getElementById('languageDropdown').addEventListener('mouseout', function (event) {
-              if (!isCursorOverDropdown(this)) {
-                this.style.display = "none";
-              }
-            })
           </script>
           <li class="navbar-item">
             <a href="#asdfg" class="navbar-link title-md"><i class="fa-solid fa-house-medical"></i> SERVICES</a>
