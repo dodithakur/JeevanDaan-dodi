@@ -234,6 +234,7 @@
         }
     </style>
     <link rel="stylesheet" href="./medicine/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body id="top">
@@ -289,7 +290,7 @@
 
                     <li class="navbar-item">
                         <a href="../profile.html" class="navbar-link title-md profile-avatar" title="Profile">
-                            <img src="../assets/images/doctorr.png" alt="Profile avatar" class="avatar-img">
+                             <img src="./assets/images/doctorr.png" alt="Profile avatar" class="avatar-img">
                         </a>
                     </li>
 
@@ -297,7 +298,7 @@
 
                         <li class="navbar-item">
                             <a href="#" class="navbar-link title-md" onmouseover="showLanguageDropdown()"
-                                onmouseout="hideLanguageDropdown()">LANGUAGE</a>
+                                onmouseout="hideLanguageDropdown()"><i class="fa-solid fa-language"></i> LANGUAGE</a>
                             <div id="languageDropdown" class="dropdown-content" style="display: none;">
                                 <a href="#">Hindi</a>
                                 <a href="#">English</a>
@@ -335,14 +336,14 @@
                    
                     <li class="navbar-item">
 
-                        <button href="#" class="navbar-link title-md">EMERGENCY</button>
+                        <button href="#" class="navbar-link title-md"><i class="fa-solid fa-truck-medical"></i> EMERGENCY</button>
 
                         
 
                     </li>
 
                     <li class="navbar-item">
-                        <a href="#bob" class="navbar-link title-md">CONTACT US</a>
+                        <a href="#bob" class="navbar-link title-md"><i class="fa-solid fa-phone"></i> CONTACT US</a>
                     </li>
 
                 </ul>
@@ -373,9 +374,9 @@
         </div> -->
 
         <div class="medcontainer">
-            <h1>Medicine Info Finder</h1>
+            <h1>Medicine Info Finder<i class="fa-solid fa-pills"></i> </h1>
             <input type="text" id="medicineName" placeholder="Enter keyword (name or composition)" />
-            <button class="med-search" id="searchBtn">Search</button>
+            <button class="med-search" id="searchBtn">Search <i class="fa-solid fa-magnifying-glass"></i></button>
             
             <!-- Suggested search tags -->
             <div id="suggestedSearches" class="suggested-chips">
