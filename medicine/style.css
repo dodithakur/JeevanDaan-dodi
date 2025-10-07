@@ -134,3 +134,183 @@ button.med-search:hover {
     margin: 4px;
     padding: 0px 12px;
 }
+/* Container for Medicine Finder */
+/* .medcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    border-radius: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+} */
+ .medcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* Search Box */
+
+.med {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.med h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0abde3;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.med h1 i {
+  color: #0abde3;
+  font-size: 24px;
+}
+
+/* --- Input and Button --- */
+#medicineName {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #cbe8e8;
+  border-radius: 12px;
+  outline: none;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  color:rgba(41, 38, 117, 0.645);
+}
+#medicineName::placeholder {
+  color: #555;  /* placeholder text color */
+  opacity: 1;
+}
+
+#medicineName:focus {
+  border-color: #0abde3;
+  box-shadow: 0 0 8px rgba(10, 189, 227, 0.3);
+}
+
+.med-search {
+  background: #0abde3;
+  color: blue;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.med-search:hover {
+  background: #0078AA;
+  transform: translateY(-2px);
+}
+
+/* .med h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.med input[type="text"] {
+    width: 80%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid #b2ebf2;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.med{
+    width: 80%;
+    color: #0abde3;
+}
+.med input[type="text"]:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 10px rgba(0,188,212,0.3);
+}
+
+.med button.med-search {
+    padding: 12px 25px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.med button.med-search:hover {
+    background: #0097a7;
+} */
+
+/* Medicine types section */
+.Medicine-types {
+    padding: 60px 20px;
+    background: #f0f4f8;
+}
+
+.Medical-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Medical-container div {
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.Medical-container div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.Medical-container h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00796b;
+    font-family: 'Rubik', sans-serif;
+}
+
+.Medical-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.arrow-btn {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    color: #004d40;
+}
